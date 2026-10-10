@@ -1,27 +1,31 @@
 # Hipman Designz Portfolio
 
-A responsive, static portfolio website for Hipman Designz, focused on Minecraft Bedrock addon development and custom game-inspired projects.
+A responsive orange-and-black portfolio for Hipman Designz, focused on Minecraft Bedrock addon development and custom content.
 
 ## Files
-- `index.html` — portfolio content and sections
-- `styles.css` — responsive styling and visual design
-- `script.js` — mobile navigation and automatic footer year
+- `index.html` — website content
+- `styles.css` — design and responsive layout
+- `script.js` — mobile navigation and current year
+- `assets/` — starter images cropped from the channel screenshots supplied during the portfolio update
 
-## Publish with GitHub Pages (free)
-1. Sign in to GitHub or create an account at https://github.com/.
-2. Create a **new public repository** named `hipmandesignz.github.io` if your GitHub username is `hipmandesignz`. If your username is different, replace `hipmandesignz` with your exact username. This creates the main portfolio URL `https://YOUR-USERNAME.github.io/`.
-3. Upload `index.html`, `styles.css`, `script.js`, and `README.md` to the repository root (not inside another folder).
-4. Open the repository's **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-6. Wait a few minutes and open `https://YOUR-USERNAME.github.io/`.
+## Update the project screenshots
+Replace the starter JPGs in `assets/` with your own full-resolution gameplay screenshots. Keep the same filenames if you want to avoid editing the HTML:
+- `guncraft-ze.jpg`
+- `nacht-der-untoten.jpg`
+- `mystery-box.jpg`
+- `pack-a-punch.jpg`
+- `atomic-frontier.jpg`
 
-Alternative: create a repository with any name, enable Pages from `main` / root, and your URL will be `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`.
+These starter images are crops from screenshots of the channel page, not original full-resolution video thumbnails. Better source images will make the site look much sharper.
 
-## Before publishing
-- Change the GitHub profile link in `index.html` to your real GitHub profile.
-- Replace project cards' general YouTube links with direct video URLs.
-- Consider adding real screenshots or thumbnails from your own projects. Put image files in an `assets` folder and use them in the project cards.
-- Update the subscriber count if you want to display it, or remove it if it becomes outdated.
-- Confirm that all project descriptions accurately reflect what is currently implemented or publicly available.
+## Update links
+Search `index.html` for `https://www.youtube.com/@HipmanDesignz` and replace the generic channel links with direct video URLs when you have them. Only add public download links for projects you are ready to share.
 
-No build tools, frameworks, or paid hosting are required.
+## Publish with GitHub Pages
+1. Upload/replace `index.html`, `styles.css`, `script.js`, `README.md`, and the `assets` folder in your repository root.
+2. In GitHub, open **Settings → Pages**.
+3. Under **Build and deployment**, select **Deploy from a branch**.
+4. Choose branch `main` and folder `/(root)`, then save.
+5. Wait for the Actions deployment to finish.
+
+Expected URL: `https://hipmandesignz.github.io/Hipmans-Portfolio/`
