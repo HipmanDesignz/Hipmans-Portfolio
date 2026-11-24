@@ -1,16 +1,1 @@
-const menuButton = document.querySelector('.menu-toggle');
-const nav = document.querySelector('#site-nav');
-if (menuButton && nav) {
-  menuButton.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.textContent = open ? 'Close' : 'Menu';
-  });
-  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.textContent = 'Menu';
-  }));
-}
-const year = document.querySelector('#year');
-if (year) year.textContent = new Date().getFullYear();
+const menu=document.querySelector('#menu'),nav=document.querySelector('#nav');menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open)});nav?.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')});document.querySelector('#year').textContent=new Date().getFullYear();let filter='All';const search=document.querySelector('#search');function update(){let count=0;document.querySelectorAll('.project').forEach(card=>{card.hidden=!( (filter==='All'||card.dataset.category===filter)&&card.dataset.search.toLowerCase().includes(search.value.toLowerCase().trim()));if(!card.hidden)count++});document.querySelector('#empty').hidden=count>0}document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',x===b));update()}));search?.addEventListener('input',update);document.querySelectorAll('.art img,.shot img').forEach(img=>{const fail=()=>{img.hidden=true;const shot=img.closest('.shot');if(shot){shot.hidden=true;const note=document.querySelector('.gallery-note');if(note)note.hidden=false}};img.addEventListener('error',fail);if(img.complete&&!img.naturalWidth)fail()});
